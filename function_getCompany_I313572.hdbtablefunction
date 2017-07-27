@@ -1,0 +1,18 @@
+FUNCTION "_SYS_BIC"."sap.plc.trainning.I313572::function_getCompany_I313572" () 
+RETURNS TABLE (
+	 "COMPANY_ID" INTEGER,
+	 "COMPANY_NAME" NVARCHAR(20),
+	 "COMPANY_DESCRIPTION" NVARCHAR(60)
+)
+LANGUAGE SQLSCRIPT
+SQL SECURITY DEFINER AS 
+BEGIN 
+
+var_out = SELECT 
+    *
+FROM 
+    "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572";
+        
+return :var_out;
+
+END;

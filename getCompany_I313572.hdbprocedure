@@ -14,7 +14,11 @@ BEGIN
     SELECT 
        count(*) into rowCount /*  count rows */
         /*  * "select all" */
-        
       FROM 
         "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572";
+    companies = SELECT *
+    FROM "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572"
+    /*WHERE COMPANY_DESCRIPTION = :companyDescription;*/
+    WHERE COMPANY_DESCRIPTION like '%' || :companyDescription || '%';
+
 END
