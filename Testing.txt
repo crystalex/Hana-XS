@@ -1,0 +1,45 @@
+*Generate Select
+SELECT TOP 1000
+	"COMPANY_ID",
+	"COMPANY_NAME",
+	"COMPANY_DESCRIPTION"
+FROM "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572";
+
+*Generate Insert
+INSERT INTO "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572" VALUES(
+	20,
+	'SAP',
+	'<3'
+);
+
+INSERT INTO "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572" VALUES(
+	30,
+	'Oracle',
+	'X('
+);
+
+INSERT INTO "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572" VALUES(
+	40,
+	'Microsoft',
+	':|'
+);
+
+INSERT INTO "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572" VALUES(
+	50,
+	'APPLE',
+	':$'
+);
+
+INSERT INTO "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572" VALUES(
+	60,
+	'FACEBOOK',
+	':-w'
+);
+
+*Invoke procedure
+CALL "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572";
+
+
+CALL "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572"('a', ?, ?) ;
+
+CALL "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572"('<3', ?, ?) ;
