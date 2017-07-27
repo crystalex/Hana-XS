@@ -1,0 +1,13 @@
+namespace sap.plc.trainning.I313572;
+
+@Schema: 'SAP_PLC'
+context I313572 {
+
+    @Catalog.tableType : #COLUMN
+   entity t_company_I313572 {
+      key COMPANY_ID: Integer not null;
+      key COMPANY_NAME: String(20) not null;
+      key COMPANY_DESCRIPTION: String(60) not null;
+   };
+
+};
