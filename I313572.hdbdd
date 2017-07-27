@@ -4,6 +4,7 @@ namespace sap.plc.trainning.I313572;
 context I313572 {
 
     @Catalog.tableType : #COLUMN
+    @Catalog.index: [ { name : 'COMPNAME_I313572', unique : true, order : #ASC, elementNames : ['COMPANY_NAME'] } ]
    entity t_company_I313572 {
       key COMPANY_ID: Integer not null;
       key COMPANY_NAME: String(20) not null;

@@ -1,0 +1,14 @@
+PROCEDURE "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572" ( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+    SELECT 
+        *
+    FROM 
+        "SAP_PLC"."sap.plc.trainning.I313572::I313572.t_company_I313572";
+END
