@@ -43,3 +43,19 @@ CALL "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572";
 CALL "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572"('a', ?, ?) ;
 
 CALL "SAP_PLC"."sap.plc.trainning.I313572::getCompany_I313572"('<3', ?, ?) ;
+
+*Insert into Hana Table ( use Postman to test the put method)
+*Add this part in the put method body
+[
+	{
+		"COMPANY_ID": 70,
+		"COMPANY_NAME": "xxx",
+		"COMPANY_DESCRIPTION": "description xxx "
+	},
+	{
+		"COMPANY_ID": 80,
+		"COMPANY_NAME": "sagx",
+		"COMPANY_DESCRIPTION": "ddas "
+	}
+]
+
