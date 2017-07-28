@@ -31,7 +31,10 @@ function newResult() {
     return nouResult;
 }
 
+function postdbdata() {
 
+
+}
 
 
 
