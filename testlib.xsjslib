@@ -16,3 +16,23 @@ function myResult() {
 
     return result;
 } 
+
+function newResult() {
+    try {
+        var newConnection = $.hdb.getConnection();
+        
+        var myProc = newConnection.loadProcedure("SAP_PLC", "sap.plc.trainning.I313572::getCompany_I313572");
+        var nouResult =  myProc(':');
+        return JSON.stringify(nouResult);
+        newConnection.close();
+	} catch (e) {
+		nouResult = e.toString();
+    }
+    return nouResult;
+}
+
+
+
+
+
+
